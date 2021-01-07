@@ -17,6 +17,8 @@ from tornado.httpclient import HTTPError
 from ..utils import pushd
 from .utils import WEB_TEST_TIMEOUT, TEST_TOKEN, call
 
+# Add the jupyter_Server plugin for testing against jupyter_server
+pytest_plugins = ("jupyter_server.pytest_plugin",)
 
 pjoin = os.path.join
 
