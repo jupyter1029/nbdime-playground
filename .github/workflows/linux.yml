@@ -50,6 +50,9 @@ jobs:
       run: |
         pip freeze
         pip check
+    - name: List fixtures
+      run: |
+        pytest --fixtures
     - name: Run the tests
       run: |
-        pytest nbdime
+        pytest --trace-config nbdime
