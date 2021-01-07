@@ -50,7 +50,6 @@ pjoin = os.path.join
 
 schema_dir = os.path.abspath(pjoin(os.path.dirname(__file__), ".."))
 
-
 def testspath():
     return os.path.abspath(os.path.dirname(__file__))
 
