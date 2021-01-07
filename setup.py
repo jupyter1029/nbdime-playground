@@ -63,7 +63,7 @@ data_spec = [
 
 cmdclass = create_cmdclass('js', data_files_spec=data_spec)
 cmdclass['js'] = combine_commands(
-    install_npm(here, build_targets=jstargets, sources=packages_dir, npm="npm --legacy-peer-deps"),
+    install_npm(here, build_targets=jstargets, sources=packages_dir, npm=["npm", "--legacy-peer-deps"]),
     ensure_targets(jstargets),
 )
 
