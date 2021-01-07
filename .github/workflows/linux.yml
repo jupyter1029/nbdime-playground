@@ -39,6 +39,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-${{ matrix.python-version }}-
           ${{ runner.os }}-pip-
+    - name: Setup git config
+      run: |
+        git config --global user.email travis@fake.com
+        git config --global user.name "Travis CI"
     - name: Install the Python dependencies
       run: |
         pip install -e .[test] codecov
